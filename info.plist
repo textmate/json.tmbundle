@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>contactEmailRot13</key>
+	<string>wnzrf@tenlcebqhpgvbaf.arg</string>
+	<key>contactName</key>
+	<string>James Edward Gray II</string>
+	<key>description</key>
+	<string>Syntax highlight for &lt;a href="http://json.org/"&gt;JavaScript Object Notation&lt;/a&gt; files, often used as a lightweight serialization format.</string>
 	<key>name</key>
 	<string>JSON</string>
 	<key>uuid</key>
