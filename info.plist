@@ -10,6 +10,11 @@
 	<string>Syntax highlight for &lt;a href="http://json.org/"&gt;JavaScript Object Notation&lt;/a&gt; files, often used as a lightweight serialization format.</string>
 	<key>name</key>
 	<string>JSON</string>
+	<key>ordering</key>
+	<array>
+		<string>0C3868E4-F96B-4E55-B204-1DCB5A20748B</string>
+		<string>4B74F2DE-E051-4E8D-9124-EBD90A2CDD2B</string>
+	</array>
 	<key>uuid</key>
 	<string>8BB0DBAF-E65C-4E14-A6A7-467D4AA535E0</string>
 </dict>
