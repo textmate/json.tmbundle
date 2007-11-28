@@ -58,9 +58,9 @@ end</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
-	<string>^F</string>
+	<string>^H</string>
 	<key>name</key>
-	<string>Format Nicely</string>
+	<string>Reformat Document / Selection</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>scope</key>
