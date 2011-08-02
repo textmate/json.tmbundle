@@ -152,8 +152,12 @@
 				<dict>
 					<key>comment</key>
 					<string>the JSON object key</string>
-					<key>include</key>
-					<string>#string</string>
+					<key>name</key>
+					<string>meta.structure.dictionary.value.json</string>
+          <key>begin</key>
+          <string>"</string>
+          <key>end</key>
+          <string>"</string>
 				</dict>
 				<dict>
 					<key>begin</key>
