@@ -153,7 +153,7 @@
 					<key>comment</key>
 					<string>the JSON object key</string>
 					<key>name</key>
-					<string>meta.structure.dictionary.value.json</string>
+					<string>meta.structure.dictionary.key.json</string>
           <key>begin</key>
           <string>"</string>
           <key>end</key>
