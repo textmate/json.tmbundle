@@ -6,29 +6,6 @@
 	<array>
 		<string>json</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>(?x:       # turn on extended mode
-                          ^        # a line beginning with
-                          \s*      # some optional space
-                          [{\[]    # the start of an object or array
-                          (?!      # but not followed by
-                            .*     # whatever
-                            [}\]]  # and the close of an object or array
-                            ,?     # an optional comma
-                            \s*    # some optional space
-                            $      # at the end of the line
-                          )
-                          |        # ...or...
-                          [{\[]    # the start of an object or array
-                          \s*      # some optional space
-                          $        # at the end of the line
-                        )</string>
-	<key>foldingStopMarker</key>
-	<string>(?x:     # turn on extended mode
-                         ^      # a line beginning with
-                         \s*    # some optional space
-                         [}\]]  # and the close of an object or array
-                       )</string>
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
