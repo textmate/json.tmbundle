@@ -7,19 +7,33 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
+require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes'
+
+if ENV['TM_SCOPE'] =~ /attr.os-version.10\.(4|5)/
+  TextMate.exit_show_tool_tip("This command requires Snow Leopard or higher.")
+end
+
 puts `python -m json.tool`
 </string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^H</string>
 	<key>name</key>
 	<string>Reformat Document / Selection</string>
-	<key>output</key>
-	<string>replaceSelectedText</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
 	<string>source.json</string>
 	<key>uuid</key>
 	<string>4B74F2DE-E051-4E8D-9124-EBD90A2CDD2B</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
