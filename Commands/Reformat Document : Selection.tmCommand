@@ -7,7 +7,18 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
-puts `python -m json.tool`
+require "open3"
+require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
+
+stdin, stdout, stderr = Open3.popen3("python -m json.tool")
+stdin.write($stdin.read)
+stdin.close_write
+
+if !stderr.eof?
+  TextMate.exit_show_tool_tip stderr.read
+else
+  print stdout.read
+end
 </string>
 	<key>input</key>
 	<string>selection</string>
