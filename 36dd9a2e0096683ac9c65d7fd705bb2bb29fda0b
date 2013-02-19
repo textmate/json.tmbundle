@@ -1,1 +1,0 @@
-The problem with the previous version was that it would write everything to python’s stdin before starting to read from stdout. If python starts to write to stdout, and fills up the buffer, python will stall writing, and if ruby then continues to write to its stdin, and fills up that buffer (which python no longer empties) then ruby also stalls.
