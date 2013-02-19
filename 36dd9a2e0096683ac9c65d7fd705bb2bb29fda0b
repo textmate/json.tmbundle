@@ -1,10 +1,1 @@
-tree 60ae8435a4020323e66dabf275d87e3e7b4edac6
-parent 41f6e65f53dff8913b44e2670329c84931637306
-author Allan Odgaard <git@abetarda.com> 1361293628 +0100
-committer Allan Odgaard <git@abetarda.com> 1361294187 +0100
-
-Drop intermediate ruby code for JSON prettifier
-
-For reasons I didn’t care to learn, the ruby wrapper would stall for large JSON files.
-
-While the command is simply calling the python JSON tool (module) it has a shell shebang as I am not sure what code is required to replicate python’s ‘-m’ switch.
+The problem with the previous version was that it would write everything to python’s stdin before starting to read from stdout. If python starts to write to stdout, and fills up the buffer, python will stall writing, and if ruby then continues to write to its stdin, and fills up that buffer (which python no longer empties) then ruby also stalls.
