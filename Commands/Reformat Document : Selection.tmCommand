@@ -5,8 +5,11 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/bin/sh
-/usr/bin/python -m json.tool
+	<string>#!/bin/bash
+if ! /usr/bin/python -m json.tool; then
+	. "$TM_SUPPORT_PATH/lib/bash_init.sh"
+	exit_show_tool_tip
+fi
 </string>
 	<key>input</key>
 	<string>selection</string>
