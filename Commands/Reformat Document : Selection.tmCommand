@@ -5,24 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby
-
-require "open3"
-require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes'
-
-if ENV['TM_SCOPE'] =~ /attr.os-version.10\.(4|5)/
-  TextMate.exit_show_tool_tip("This command requires Snow Leopard or higher.")
-end
-
-stdin, stdout, stderr = Open3.popen3("python -m json.tool")
-stdin.write($stdin.read)
-stdin.close_write
-
-if !stderr.eof?
-  TextMate.exit_show_tool_tip(stderr.read)
-else
-  print stdout.read
-end
+	<string>#!/bin/sh
+/usr/bin/python -m json.tool
 </string>
 	<key>input</key>
 	<string>selection</string>
