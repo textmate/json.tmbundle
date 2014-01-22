@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
+
+error = `cat | python -mjson.tool 2&gt;&amp;1 &gt; /dev/null`
+
+if error.empty?
+  puts "Valid JSON, no errors"
+else
+  puts error
+  TextMate.go_to :line =&gt; $1 if error =~ /line (\d+)/
+end
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^V</string>
+	<key>name</key>
+	<string>Validate Syntax</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>scope</key>
+	<string>source.json</string>
+	<key>uuid</key>
+	<string>CB0DD80E-CD51-49C3-A89C-57E8C3168067</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
