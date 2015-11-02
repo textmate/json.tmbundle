@@ -5,11 +5,16 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/bin/bash
-if ! /usr/bin/python -m json.tool; then
-	. "$TM_SUPPORT_PATH/lib/bash_init.sh"
-	exit_show_tool_tip
-fi
+	<string>#!/usr/bin/env ruby20
+require 'json'
+
+stdin = STDIN.read
+begin
+hash = JSON.parse stdin
+print JSON.pretty_generate(hash, indent: " "*4)
+rescue Exception =&gt; e
+print stdin
+end
 </string>
 	<key>input</key>
 	<string>selection</string>
