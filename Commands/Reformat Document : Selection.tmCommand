@@ -9,9 +9,11 @@
 require 'json'
 
 stdin = STDIN.read
+indent_level = (ENV['TM_SOFT_TABS'] == "NO" ? "\t" : " "*ENV['TM_TAB_SIZE'].to_i )
+
 begin
 hash = JSON.parse stdin
-print JSON.pretty_generate(hash, indent: " "*4)
+print JSON.pretty_generate(hash, indent: indent_level)
 rescue Exception =&gt; e
 print stdin
 end
