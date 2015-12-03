@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+require 'json'
+
+stdin = STDIN.read
+begin
+hash = JSON.parse stdin
+print JSON.pretty_generate(hash, indent: " "*4)
+rescue Exception =&gt; e
+print stdin
+end</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^H</string>
+	<key>name</key>
+	<string>Reformat Document / Selection without encoding</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source.json</string>
+	<key>version</key>
+	<integer>2</integer>
+	<key>uuid</key>
+	<string>9575D84D-29B3-4213-ADB0-E0D1FD39B407</string>
+</dict>
+</plist>
