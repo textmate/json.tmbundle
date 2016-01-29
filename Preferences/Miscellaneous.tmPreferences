@@ -31,6 +31,15 @@
 				<string>]</string>
 			</array>
 		</array>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>TM_LINE_TERMINATOR</string>
+				<key>value</key>
+				<string>,</string>
+			</dict>
+		</array>
 	</dict>
 	<key>uuid</key>
 	<string>9D83F5F7-ECAD-4EFE-ADAC-2063C7EFED56</string>
