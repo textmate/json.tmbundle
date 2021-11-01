@@ -129,8 +129,32 @@
 				<dict>
 					<key>comment</key>
 					<string>the JSON object key</string>
-					<key>include</key>
-					<string>#string</string>
+					<key>name</key>
+					<string>meta.structure.dictionary.key.json</string>
+					<key>begin</key>
+					<string>(?&lt;=\{\n)|(\{)|(?&lt;=,\s)|(,)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.dictionary.begin.json</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.separator.dictionary.pair.json</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(?=:)</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#string</string>
+						</dict>
+					</array>
 				</dict>
 				<dict>
 					<key>begin</key>
