@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env ruby18
 require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
 
-error = `cat | python -mjson.tool 2&gt;&amp;1 &gt; /dev/null`
+error = `cat | python3 -mjson.tool 2&gt;&amp;1 &gt; /dev/null`
 
 if error.empty?
   puts "Valid JSON, no errors"
